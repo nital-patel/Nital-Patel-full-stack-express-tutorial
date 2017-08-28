@@ -17,3 +17,10 @@ app.set('views', path.join(__dirname, 'views'));
 
 const moviesRouter = require('./routes/movies-routes');
 app.use('/movies', moviesRouter)
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+
