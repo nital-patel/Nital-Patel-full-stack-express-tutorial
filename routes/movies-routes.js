@@ -8,5 +8,6 @@ moviesRouter.get('/:id/edit', moviesController.edit)
 moviesRouter.put('/:id', moviesController.update)
 moviesRouter.post('/', moviesController.create)
 moviesRouter.get('/new', moviesController.new)
+moviesRouter.delete('/:id', moviesController.destroy)
 
 module.exports = moviesRouter;
